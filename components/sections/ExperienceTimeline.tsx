@@ -8,21 +8,37 @@ const experience = [
         company: "ARN & Co",
         role: "Full Stack Developer",
         period: "Feb 2025 - Present",
-        desc: "Designed, developed, and maintained full-stack web applications with strong backend focus. Built REST APIs for booking systems, CMS modules, and internal business tools using Django and DRF.",
+        points: [
+            "Designed, developed, and maintained full-stack web applications with strong backend focus.",
+            "Built REST APIs for booking systems, CMS modules, and internal business tools using Django and DRF.",
+            "Developed backend services using Django and Django REST Framework.",
+            "Designed SQL schemas, optimized queries, and handled transactional workflows.",
+            "Implemented authentication, authorization, and secure access control.",
+            "Performed API testing, debugging, and validation using Postman."
+        ],
         tech: ["Django", "React", "PostgreSQL"]
     },
     {
         company: "The Metakey",
         role: "Backend Developer",
         period: "May 2023 - Sep 2024",
-        desc: "Developed backend systems for interactive and digital asset-driven platforms. Integrated third-party APIs, built game-related backend services, and implemented web scraping workflows.",
+        points: [
+            "Developed backend systems for interactive and digital asset-driven platforms.",
+            "Integrated third-party APIs and external data providers.",
+            "Built backend services supporting game-related platforms.",
+            "Implemented web scraping and structured data extraction workflows.",
+            "Conducted API testing, debugging, and response validation."
+        ],
         tech: ["Node.js", "Python", "Blockchain API"]
     },
     {
         company: "Airobosoft",
         role: "AI / ML Intern",
         period: "Sep 2021 - Nov 2021",
-        desc: "Built a driver drowsiness detection system using Python and computer vision. Developed a desktop-based AI voice assistant for task automation.",
+        points: [
+            "Built a driver drowsiness detection system using Python and computer vision.",
+            "Developed a desktop-based AI voice assistant for task automation.",
+        ],
         tech: ["Python", "TensorFlow", "OpenCV"]
     }
 ];
@@ -53,9 +69,11 @@ export default function ExperienceTimeline() {
                         {item.period}
                     </div>
 
-                    <p className="text-gray-400 leading-relaxed mb-4 max-w-2xl">
-                        {item.desc}
-                    </p>
+                    <ul className="text-gray-400 leading-relaxed mb-4 max-w-2xl list-disc pl-5 space-y-2">
+                        {item.points.map((point, i) => (
+                            <li key={i}>{point}</li>
+                        ))}
+                    </ul>
 
                     <div className="flex flex-wrap gap-2">
                         {item.tech.map(t => (
