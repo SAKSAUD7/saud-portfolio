@@ -66,8 +66,8 @@ export default function Hero() {
                                     href="/projects"
                                     className="px-8 py-4 bg-white text-black font-semibold rounded-md hover:bg-gray-200 transition-all flex items-center gap-2"
                                 >
-                                    View Portfolio
-                                    <ArrowRight size={18} />
+                                    View Projects
+                                    <ArrowRight size={20} />
                                 </Link>
 
                                 <Link
