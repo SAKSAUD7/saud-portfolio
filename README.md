@@ -1,42 +1,82 @@
-# Saud Ali Khan - Senior Full Stack Portfolio
+# Saud Ali Khan - Premium Developer Portfolio
 
-This is a premium Next.js portfolio website built with TypeScript, Tailwind CSS, and Framer Motion.
+A high-performance, cinematic full-stack developer portfolio built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. Designed to showcase professional work with a premium, mobile-responsive UI, rich animations, and a seamless user experience.
 
-## 🚀 Getting Started
+![Portfolio Preview](/public/images/profile%20image%20sak.png)
 
-### 1. Install Dependencies
-(If not already done)
+## 🚀 Features
+
+*   **Premium UI/UX:** Glassmorphism effects, smooth gradients, and cinematic animations using `framer-motion`.
+*   **Fully Responsive:** optimized for all devices with a desktop-parity mobile experience.
+*   **Interactive Projects:** Custom lightbox galleries and detailed case study pages for each project.
+*   **Performance First:** Server Components for best-in-class SEO and load times.
+*   **Type Safe:** Built entirely with TypeScript for reliability.
+
+## 🛠️ Tech Stack
+
+*   **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+*   **Language:** [TypeScript](https://www.typescriptlang.org/)
+*   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+*   **Animations:** [Framer Motion](https://www.framer.com/motion/)
+*   **Icons:** [Lucide React](https://lucide.dev/)
+*   **Deployment:** [Vercel](https://vercel.com/)
+
+## 📂 Project Structure
+
 ```bash
-npm install --legacy-peer-deps
+├── app/                  # Next.js App Router pages
+│   ├── page.tsx          # Homepage
+│   └── projects/[slug]/  # Dynamic Project Detail pages
+├── components/           # Reusable UI components
+│   ├── ui/               # Core atomic components (Hero, Navbar, StatsCards)
+│   ├── sections/         # Homepage sections (ProjectGrid, Experience, Skills)
+│   └── projects/         # Project-specific components (ProjectDetailClient)
+├── data/                 # Static data files
+│   └── projects.ts       # Structured project content including rich details
+└── public/               # Static assets (images, fonts)
 ```
 
-### 2. Run Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚡ Getting Started
 
-### 3. Build for Production
+### Prerequisites
+
+Ensure you have **Node.js 18+** installed.
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/saud-portfolio.git
+    cd saud-portfolio
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+3.  **Run Development Server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in Browser:**
+    Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+## 🚢 Building for Production
+
+To create an optimized production build:
+
 ```bash
 npm run build
 npm start
 ```
 
-## 📂 Project Structure
+## 📄 License
 
-- `app/` - Pages and Layouts (App Router)
-- `components/ui` - Reusable UI components (Navbar, Hero, etc.)
-- `components/sections` - Major page sections
-- `data/projects.ts` - **Content Management**: Update your projects here.
-- `public/images/gallery` - Project screenshots
+This project is open source and available under the [MIT License](LICENSE).
 
-## 🎨 Design System
-- **Fonts**: Outfit (Headings), Inter (Body)
-- **Colors**: Dark mode base with Purple/Blue accents
-- **Animations**: Framer Motion for smooth transitions
-
-## 🛠 Tech Stack
-- Next.js 14
-- React 18
-- Tailwind CSS 3.4
-- Framer Motion 11
+---
+**Developed by Saud Ali Khan**
