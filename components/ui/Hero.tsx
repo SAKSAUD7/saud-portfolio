@@ -26,7 +26,7 @@ export default function Hero() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2 }}
-                                className="text-5xl md:text-7xl lg:text-8xl font-bold font-outfit mb-4 leading-none"
+                                className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-outfit mb-4 leading-none"
                             >
                                 <span className="text-white">SAUD</span>
                                 <br />
@@ -123,7 +123,7 @@ export default function Hero() {
                         >
                             <div className="relative w-full max-w-md lg:max-w-lg">
                                 {/* Photo container - clean, no effects */}
-                                <div className="relative aspect-[3/4] w-full overflow-hidden">
+                                <div className="relative aspect-[3/4] w-[85%] sm:w-[90%] md:w-full mx-auto overflow-hidden rounded-2xl md:rounded-3xl">
                                     <Image
                                         src="/images/profile image sak.png"
                                         alt="Saud Ali Khan - Full Stack Developer"

@@ -94,8 +94,50 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
             <section className="py-20">
                 <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-                    {/* Left Content */}
-                    <div className="lg:col-span-8 space-y-12">
+                    {/* Right Sidebar / Gallery - Shown first on mobile */}
+                    <div className="lg:col-span-4 lg:col-start-9 space-y-8 lg:sticky lg:top-32 order-1 lg:order-2">
+                        <div className="p-4 md:p-6 bg-[#111] rounded-2xl border border-white/5">
+                            <h3 className="text-lg font-bold font-outfit mb-4">Project Gallery</h3>
+                            <div
+                                className="aspect-video bg-[#222] rounded-lg overflow-hidden mb-4 relative cursor-pointer group"
+                                onClick={() => openLightbox(0)}
+                            >
+                                <Image
+                                    src={project.images.main}
+                                    alt={`${project.title} - Main`}
+                                    fill
+                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    sizes="(max-width: 1024px) 100vw, 33vw"
+                                />
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors flex items-center justify-center">
+                                    <div className="w-10 h-10 bg-black/50 backdrop-blur rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
+                                        <ExternalLink size={20} />
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-2 gap-2">
+                                {project.images.gallery.map((img, n) => (
+                                    <div
+                                        key={n}
+                                        className="aspect-square bg-[#222] rounded-lg overflow-hidden relative cursor-pointer group"
+                                        onClick={() => openLightbox(n + 1)}
+                                    >
+                                        <Image
+                                            src={img}
+                                            alt={`${project.title} - Screenshot ${n + 1}`}
+                                            fill
+                                            className="object-cover group-hover:scale-110 transition-transform duration-300"
+                                            sizes="(max-width: 1024px) 50vw, 16vw"
+                                        />
+                                        <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors" />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Left Content - Shown second on mobile */}
+                    <div className="lg:col-span-8 lg:row-start-1 space-y-12 order-2 lg:order-1">
 
                         {/* Overview */}
                         <div>
@@ -141,47 +183,7 @@ export default function ProjectDetailClient({ project }: ProjectDetailClientProp
 
                     </div>
 
-                    {/* Right Sidebar / Gallery */}
-                    <div className="lg:col-span-4 space-y-8 sticky top-32">
-                        <div className="p-6 bg-[#111] rounded-2xl border border-white/5">
-                            <h3 className="text-lg font-bold font-outfit mb-4">Project Gallery</h3>
-                            <div
-                                className="aspect-video bg-[#222] rounded-lg overflow-hidden mb-4 relative cursor-pointer group"
-                                onClick={() => openLightbox(0)}
-                            >
-                                <Image
-                                    src={project.images.main}
-                                    alt={`${project.title} - Main`}
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                                    sizes="(max-width: 1024px) 100vw, 33vw"
-                                />
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors flex items-center justify-center">
-                                    <div className="w-10 h-10 bg-black/50 backdrop-blur rounded-full flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity">
-                                        <ExternalLink size={20} />
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="grid grid-cols-2 gap-2">
-                                {project.images.gallery.map((img, n) => (
-                                    <div
-                                        key={n}
-                                        className="aspect-square bg-[#222] rounded-lg overflow-hidden relative cursor-pointer group"
-                                        onClick={() => openLightbox(n + 1)}
-                                    >
-                                        <Image
-                                            src={img}
-                                            alt={`${project.title} - Screenshot ${n + 1}`}
-                                            fill
-                                            className="object-cover group-hover:scale-110 transition-transform duration-300"
-                                            sizes="(max-width: 1024px) 50vw, 16vw"
-                                        />
-                                        <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-colors" />
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+
 
                 </div>
             </section>

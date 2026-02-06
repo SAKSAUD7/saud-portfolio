@@ -33,7 +33,7 @@ export default function Home() {
                 </h3>
                 <p className="text-gray-300 leading-relaxed text-lg mb-6">
                   Full Stack Developer with <span className="text-white font-semibold">2.5+ years</span> of hands-on experience designing, developing, testing, and
-                  maintaining end-to-end web applications and backend systems. Have worked at <span className="text-purple-400 font-semibold">The metakey</span>Currently working at <span className="text-purple-400 font-semibold">ARN & Co</span>.
+                  maintaining end-to-end web applications and backend systems.  And Have worked at <span className="text-purple-400 font-semibold">The metakey</span>Currently working at <span className="text-purple-400 font-semibold">ARN & Co</span>.
                 </p>
                 <p className="text-gray-300 leading-relaxed text-lg mb-6">
                   Strong experience in <span className="text-white font-semibold">JavaScript and Python</span>, leveraging Node.js and Django for backend architecture,
