@@ -61,16 +61,16 @@ export default function SkillBar({ name, level, color = "purple", delay = 0 }: S
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay }}
-            className="mb-6"
+            className="mb-4"
         >
             {/* Skill name and percentage */}
-            <div className="flex justify-between items-center mb-2">
-                <span className="text-white font-medium">{name}</span>
-                <span className="text-gray-400 text-sm font-mono">{displayLevel}%</span>
+            <div className="flex justify-between items-center mb-1">
+                <span className="text-white font-medium text-sm">{name}</span>
+                <span className="text-gray-400 text-xs font-mono">{displayLevel}%</span>
             </div>
 
             {/* Progress bar container */}
-            <div className="relative h-2 bg-white/5 rounded-full overflow-hidden">
+            <div className="relative h-1.5 bg-white/5 rounded-full overflow-hidden">
                 {/* Background glow */}
                 <motion.div
                     initial={{ width: 0 }}
