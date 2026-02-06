@@ -126,7 +126,9 @@ This work directly contributed to the reliability of The Metakey's ecosystem, br
     title: "Business Management System",
     shortDescription: "BSM Platform is a full-scale customer experience and service management system designed to help organizations handle customer support operations, system monitoring, service quality tracking, and SLA performance from a single unified interface. Centralizes scattered support tools into one clean, scalable application with role-based ticket lifecycle management.",
     category: "Full Stack",
-    links: {},
+    links: {
+      live: "https://deployed-project-e7a7.vercel.app/",
+    },
     tags: ["Next.js", "Django", "Enterprise", "SLA", "Support"],
     fullDescription: `The Business Service Management (BSM) Platform is an enterprise-grade customer experience system designed to unify support operations, service monitoring, and performance tracking. It serves as a central nerve center for support teams, replacing disjointed tools with a cohesive, API-driven workflow.
 
