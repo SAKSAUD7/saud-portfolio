@@ -6,7 +6,7 @@ import { useRef, useEffect, useState } from "react";
 interface SkillBarProps {
     name: string;
     level: number; // 0-100
-    color?: "purple" | "blue" | "cyan" | "green";
+    color?: "purple" | "blue" | "cyan" | "green" | "pink";
     delay?: number;
 }
 
@@ -26,6 +26,10 @@ const colorMap = {
     green: {
         bg: "bg-gradient-to-r from-green-500 to-green-600",
         glow: "shadow-green-500/50",
+    },
+    pink: {
+        bg: "bg-gradient-to-r from-pink-500 to-pink-600",
+        glow: "shadow-pink-500/50",
     },
 };
 

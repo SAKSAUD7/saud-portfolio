@@ -9,10 +9,9 @@ const skillCategories = [
         title: "Languages",
         color: "purple" as const,
         skills: [
-            { name: "JavaScript (ES6+)", level: 95 },
+            { name: "JavaScript ", level: 95 },
             { name: "TypeScript", level: 90 },
             { name: "Python", level: 90 },
-            { name: "Dart", level: 80 },
             { name: "SQL", level: 85 },
             { name: "HTML5 / CSS3", level: 95 },
         ],
@@ -22,11 +21,11 @@ const skillCategories = [
         color: "blue" as const,
         skills: [
             { name: "React.js", level: 95 },
-            { name: "Next.js 14", level: 90 },
+            { name: "Next.js 14 ", level: 70 },
             { name: "React Native", level: 85 },
             { name: "Tailwind CSS", level: 95 },
-            { name: "Framer Motion", level: 85 },
-            { name: "Redux / Zustand", level: 80 },
+            { name: "Framer Motion", level: 75 },
+            { name: "Redux / Zustand", level: 70 },
         ],
     },
     {
@@ -39,6 +38,7 @@ const skillCategories = [
             { name: "Express.js", level: 85 },
             { name: "FastAPI", level: 80 },
             { name: "GraphQL", level: 75 },
+
         ],
     },
     {
@@ -63,6 +63,18 @@ const skillCategories = [
             { name: "Figma", level: 75 },
             { name: "Vercel", level: 90 },
             { name: "VS Code", level: 95 },
+        ],
+    },
+    {
+        title: "Testing & QA",
+        color: "pink" as const,
+        skills: [
+            { name: "API Testing & Debugging", level: 95 },
+            { name: "Web App Testing", level: 90 },
+            { name: "Game Testing", level: 85 },
+            { name: "Data Integrity Checks", level: 90 },
+            { name: "System Validation", level: 85 },
+            { name: "Performance Profiling", level: 80 },
         ],
     },
 ];
